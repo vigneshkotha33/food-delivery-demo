@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-var mainRoot = document.getElementById("root");
-var mainDom = ReactDOM.createRoot(mainRoot);
+const reactHelloWorld = React.createElement("div", null, React.createElement("h2", null, "Hello World using React"),
+    React.createElement("p", null, "This is react code"));
 
-function HelloWorld() {
-  return <h1>Hello World!</h1>;
-}
+const htmlRoot = document.getElementById("root");
+const rootReact = ReactDOM.createRoot(htmlRoot);
 
-mainDom.render(<HelloWorld/>)
+rootReact.render(reactHelloWorld);
